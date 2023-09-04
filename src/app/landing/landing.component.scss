@@ -1,0 +1,43 @@
+/* Estilos para la imagen en pantallas grandes (por defecto muestra la imagen completa) */
+.image-container {
+  overflow: hidden; /* Oculta cualquier contenido fuera del contenedor */
+  margin-top: -100px; /* Ajusta la cantidad necesaria para superponer la imagen debajo del encabezado */
+  min-height: 50%;
+
+}
+
+.full-image {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+}
+
+/* Estilos para la imagen en dispositivos móviles */
+@media (max-width: 768px) {
+  .full-image {
+    width: 200%; /* Aumenta el ancho para mostrar la mitad derecha de la imagen */
+    transform: translateX(-50%); /* Desplaza la imagen hacia la izquierda para mostrar la mitad derecha */
+  }
+  .image-container {
+    position: relative;
+    top: -50px; /* Ajusta el valor según la altura de tu encabezado */
+    z-index: -1; /* Coloca la imagen detrás del contenido del encabezado */
+    margin-top: 0 !important;
+  }
+}
+
+.divider {
+  height: 100%;
+  border-left: 2px solid #333; /* Cambia el color de la línea aquí */
+}
+
+.bottom-paragraph {
+  bottom: 0; /* Coloca el párrafo en la parte inferior del contenedor */
+  left: 0; /* Opcional: puedes ajustar la posición horizontal */
+  margin-bottom: 10px; /* Margen inferior opcional para separar el párrafo del borde inferior */
+}
+
+
+.container{
+  max-width: 720px !important;
+}
+

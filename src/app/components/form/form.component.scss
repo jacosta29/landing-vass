@@ -1,0 +1,103 @@
+/* Estilo personalizado para el input */
+input {
+  border: none; /* Elimina el borde predeterminado */
+  border-bottom: 1px solid white; /* Agrega un borde inferior blanco */
+  background-color: black; /* Fondo transparente */
+  color: white !important; /* Color de texto blanco */
+  border-radius: 0px;
+}
+.form-group{
+  padding-bottom: 10px !important;
+}
+input:focus {
+  background-color: black !important; /* Fondo transparente (evita que cambie) */
+  outline: none; /* Elimina el contorno de enfoque */
+}
+textarea,textarea:focus{
+  background-color: black; /* Fondo transparente */
+  color: white !important; /* Color de texto blanco */
+  border-radius: 0px;
+}
+label{
+  color: white;
+}
+/* Estilo personalizado para el formulario */
+form {
+  background-color: black; /* Fondo negro */
+  padding: 20px; /* Espacio interno para el formulario */
+}
+
+form::after{
+  background-color: white;
+  color: black;
+  transform: scale(0, 0);
+  transition: all 0.3s ease;
+}
+
+form:hover{
+  background-color: rgb(20, 20, 20);
+  transition: all 0.3s ease-out;
+  transform: scale(1, 1);
+  label{
+    color: white !important;
+  }
+  input , textarea, input:active, textarea:active {
+    background-color: rgb(20, 20, 20) !important;
+  }
+}
+
+
+.rounded-button {
+  width: 100px; /* Ancho y alto iguales para hacerlo redondo */
+  height: 100px;
+  border-radius: 50%; /* Borde redondeado */
+  background-color: black; /* Fondo negro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid white;
+  padding: 10px;
+  margin: auto;
+  margin-left: 87% !important;
+}
+
+.rounded-button:hover{
+  background: white;
+color: black;
+}
+
+.rounded-button:disabled{
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .rounded-button {
+    width: 100px; /* Ancho y alto iguales para hacerlo redondo */
+    height: 100px;
+    border-radius: 50%; /* Borde redondeado */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid white;
+    padding: 10px;
+    margin: auto;
+    margin-left: 70% !important;
+  }
+}
+
+
+.label-bold {
+  font-weight: bold;
+  transition: font-weight 0.3s ease-in-out;
+}
+
+/* Estilo para los inputs con borde aumentado cuando están activos */
+.input-border-increase {
+  transition: border 0.3s ease-in-out;
+}

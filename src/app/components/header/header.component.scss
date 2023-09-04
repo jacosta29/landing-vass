@@ -1,0 +1,30 @@
+/* Estilos para hacer el encabezado oscuro en dispositivos móviles */
+@media (max-width: 1000px) {
+  .bg-dark-mobile {
+    background-color: #333 !important; /* Fondo oscuro */
+    transition: background-color 0.3s ease; /* Transición de color suave */
+    color:#fff !important
+  }
+}
+
+/* Estilos para el texto de navegación en dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar-light .navbar-nav .nav-link .navbar-brand {
+    color: #fff !important;
+  }
+  .nav-item{
+    margin-left: 0px;
+  }
+
+}
+
+.nav-item{
+  margin-left: 13px;
+}
+
+.nav-item:hover{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.imagen:hover {filter: opacity(.5);}

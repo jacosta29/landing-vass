@@ -1,0 +1,73 @@
+<div class="mb-1" animation="flipInY" delay="0" duration="500" offset="50" triggerOnce="false">
+  <form class="row p-5 w-100 m-0" [formGroup]="form" (ngSubmit)="sendForm()" autocomplete="off">
+    <div class="col-12 col-md-6 p-2 p-md-5">
+      <div class="form-group p-4 ">
+        <label for="nombre">Nombre y apellido</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+        <div
+          *ngIf="form.controls['nombre']?.invalid && (form.controls['nombre']?.dirty || form.controls['nombre']?.touched)"
+          class="text-danger">
+          <div *ngIf="form.controls['nombre']">Nombre y apellido es requerido.</div>
+        </div>
+      </div>
+
+      <div class="form-group p-4">
+        <label for="email" >Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email">
+        <div
+          *ngIf="form.controls['email']?.invalid && (form.controls['email']?.dirty || form.controls['email']?.touched)"
+          class="text-danger">
+          <div *ngIf="form.controls['email'].errors?.['required']">Email es requerido.</div>
+          <div *ngIf="form.controls['email'].errors?.['email']">Email no valido.</div>
+        </div>
+      </div>
+
+      <div class="form-group p-4">
+        <label for="empresa">Empresa/Organismo</label>
+        <input type="text" class="form-control" id="empresa" formControlName="empresa">
+        <div
+          *ngIf="form.controls['empresa']?.invalid && (form.controls['empresa']?.dirty || form.controls['empresa']?.touched)"
+          class="text-danger">
+          <div *ngIf="form.controls['empresa'].errors?.['required']">Empresa/Organismo es requerido.</div>
+        </div>
+      </div>
+
+      <div class="form-group p-4">
+        <label for="pais">País</label>
+        <input type="text" class="form-control" id="pais" formControlName="pais">
+        <div *ngIf="form.controls['pais']?.invalid && (form.controls['pais']?.dirty || form.controls['pais']?.touched)"
+          class="text-danger">
+          <div *ngIf="form.controls['pais'].errors?.['required']">País es requerido.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-6 p-2 p-md-5">
+      <div class="form-group p-4">
+        <label for="telefono">Télefono</label>
+        <input type="text" class="form-control" id="telefono" formControlName="telefono">
+        <div
+          *ngIf="form.controls['telefono']?.invalid && (form.controls['telefono']?.dirty || form.controls['telefono']?.touched)"
+          class="text-danger">
+          <div *ngIf="form.controls['telefono'].errors?.['required']">Télefono es requerido.</div>
+        </div>
+      </div>
+      <div class="form-group p-4">
+        <label for="mensaje">Mensaje</label>
+        <textarea type="text" class="form-control" id="mensaje" formControlName="mensaje" rows="4" cols="50"></textarea>
+        <div
+          *ngIf="form.controls['mensaje']?.invalid && (form.controls['mensaje']?.dirty || form.controls['mensaje']?.touched)"
+          class="text-danger">
+          <div *ngIf="form.controls['mensaje'].errors?.['required']">Mensaje es requerido.</div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="float-right w-100">
+      <button type="submit" [disabled]="form.invalid" class=" rounded-button" [@wasClicked]="clicked"
+        (mouseover)="onClick()" (mouseout)="out()">Enviar</button>
+    </div>
+  </form>
+</div>

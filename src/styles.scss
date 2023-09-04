@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+// Importa Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Estilos personalizados
+body {
+  background-color: #f0f0f0;
+  font-size: 2rem;
+}
+
+.container{
+  padding: 0%;
+  min-height: 150px;
+  margin: 0px;
+  max-width: 100% !important;
+}
+
+main {
+  margin-top: 20px;
+  min-height: 550px;
+}
+
+// Estilo para el encabezado
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+// Estilo para el contenido principal
+.main-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+// Media queries para hacer el diseño responsive
+@media (max-width: 768px) {
+  .container {
+    margin-top: 10px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    font-size: 24px;
+  }
+
+  .main-content {
+    font-size: 16px;
+  }
+}
